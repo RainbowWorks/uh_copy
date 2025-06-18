@@ -1,0 +1,95 @@
+.inner {
+    max-width: 144rem;
+    margin: 0 auto;
+}
+
+
+.default {
+    text-align: center;
+    padding: 8rem 0;
+}
+
+.default h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.default p {
+    display: block;
+}
+
+.default .itm img {
+    overflow: hidden;
+}
+
+
+.default .itm strong {
+    display: block;
+    text-align: center;
+    margin-top: 1.6rem;
+    margin-bottom: 8px;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.default .itm p {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+}
+
+.default .itm em {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
+.scroll {
+    position: relative;
+    font-size: 1.6rem;
+    color: var(white-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+
+.scroll::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 50%;
+
+    transform: translate(-50%, 0);
+
+    width: 4px;
+    height: 4px;
+
+    background: var(--white-color);
+    border-radius: 50%;
+
+    animation: scroll 2s infinite;
+}
+
+.scroll::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+    width: 1px;
+    height: 80px;
+    background: var(--white-color);
+    opacity: 0.5;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 80px);
+    }
+}
