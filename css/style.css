@@ -398,7 +398,7 @@ body {
     width: 1px;
     height: 0.5em;
 
-    background: #333;
+    background: #aaa;
 
     transform: translate(0, -50%);
     /*transform 쓰기 싫으면 top 8px, bottom 8px바꿔주고 tf빼면됨*/
