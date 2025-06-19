@@ -11,18 +11,6 @@ $(function () {
 });
 
 $(function () {
-    const main_brand_slide = new Swiper('.main_brand_slide', {
-        loop: true,
-        slidesPerView: 4,
-        spaceBetween: 30,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-});
-
-$(function () {
     const main_visual_slide = new Swiper('.main_visual_slide', {
         loop: true,
         parallax: true,/*겹치는 슬라이드이다. wiper-parallax="300" html에 적어줘야됨*/
@@ -39,4 +27,26 @@ $(function () {
     $('.main_visual .next').on('click', function () {
         main_visual_slide.slideNext();
     });
-})
+
+    $('.main_sus .inner .itm').on('mouseenter', function () {
+        $('.main_sus .inner .itm').removeClass('on');
+        $(this).addClass('on');
+    });
+});
+
+$(function () {
+    const main_brand_slide = new Swiper('.main_brand_slide', {
+        loop: true,
+        slidesPerView: 4,
+        spaceBetween: 30,
+        // autoplay: {
+        //     delay: 1000,
+        //     disableOnInteraction: false,
+        // },
+        // speed: 1500,
+        navigation: {
+            nextEl: ".main_brand .arrows .next",
+            prevEl: ".main_brand .arrows .prev ",
+        },
+    });
+});
